@@ -1,0 +1,19 @@
+{
+    "exercises": [
+        {
+            "id": 1,
+            "name": "Weather",
+            "number": "one",
+            "description": "<p>1. Escribir un algoritmo en el cual se consulte al usuario que ingrese ¿cómo está el día de hoy ? (soleado, nublado, lloviendo). A continuación, mostrar por pantalla un mensaje que indique 'El día de hoy está...', completando el mensaje con el dato que ingresó el usuario.</p>",
+            "content": "<form><br><label for=\"weather\" class=\"pr-5\">How's the weather?</label><input type=\"text\" id=\"inputej1\" for=\"inputej1\" name=\"inputej1\" placeholder=\"Input weather\" class=\"outline\"><button type=\"button\" id=\"ej1button\" onclick=\"ejercicio1()\" class=\"inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]\">Submit</button><p id=\"resultej1\"></form>"
+        },    
+        {
+            "id": 2,
+            "name": "Radius",
+            "number": "two",
+            "description": "<p>2.Calcular radio.</p>",
+            "content": "",
+            "script": ""
+        }
+    ]
+}
