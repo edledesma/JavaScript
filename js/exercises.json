@@ -3,17 +3,45 @@
         {
             "id": 1,
             "name": "Weather",
-            "number": "one",
+            "number": "One",
             "description": "<p>1. Escribir un algoritmo en el cual se consulte al usuario que ingrese ¿cómo está el día de hoy ? (soleado, nublado, lloviendo). A continuación, mostrar por pantalla un mensaje que indique 'El día de hoy está...', completando el mensaje con el dato que ingresó el usuario.</p>",
-            "content": "<form><br><label for=\"weather\" class=\"pr-5\">How's the weather?</label><input type=\"text\" id=\"inputej1\" for=\"inputej1\" name=\"inputej1\" placeholder=\"Input weather\" class=\"outline\"><button type=\"button\" id=\"ej1button\" onclick=\"ejercicio1()\" class=\"inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]\">Submit</button><p id=\"resultej1\"></form>"
-        },    
+            "content": "<form> <label for=\"weather\">How's the weather? </label> <input id=\"ej1input\" for=\"ej1input\" type=\"text\" placeholder=\"Cloudy/Sunn/Rainy\" name=\"ej1input\"> <button type=\"button\" onclick=\"ejercicio1()\" id=\"ej1button\">SEND</button><br><br><p id=\"ej1result\"></p> </form>"
+        },
         {
             "id": 2,
             "name": "Radius",
-            "number": "two",
+            "number": "Two",
+            "description": "<p>2. Conocido el número en matemática PI π, pedir al usuario que ingrese el valor del radio de una circunferencia y calcular y mostrar por pantalla el área y perímetro</p>",
+            "content": "<form> <label for=\"radius\">Input a radius</label> <input type=\"number\" for=\"radius\" id=\"ej2input\" name=\"ej2input\"> <button type=\"button\" id=\"ej2button\" onclick=\"ejercicio2()\">SEND</button> <p id=\"ej2result\"></p> </form>"
+
+        },
+        {
+            "id": 3,
+            "name": "Age",
+            "number": "Three",
+            "description": "<p>3. Escriba un programa en donde se pida la edad del usuario. Si el usuario es mayor de edad se debe mostrar un mensaje indicándolo.</p>",
+            "content":""
+        },
+        {
+            "id": 4,
+            "name": "Radius",
+            "number": "Four",
             "description": "<p>2.Calcular radio.</p>",
-            "content": "",
-            "script": ""
+            "content": ""
+        },
+        {
+            "id": 5,
+            "name": "Radius",
+            "number": "Five",
+            "description": "<p>2.Calcular radio.</p>",
+            "content": ""
+        },
+        {
+            "id": 6,
+            "name": "Radius",
+            "number": "Six",
+            "description": "<p>2.Calcular radio.</p>",
+            "content": ""
         }
     ]
 }

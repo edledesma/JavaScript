@@ -16,6 +16,7 @@ createApp({
                 })
                 .catch((error) => alert("There has been an error " + error));
         },
+        
     },
     created() {
         this.fetchData();
