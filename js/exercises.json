@@ -20,14 +20,14 @@
             "name": "Age",
             "number": "Three",
             "description": "<p>3. Escriba un programa en donde se pida la edad del usuario. Si el usuario es mayor de edad se debe mostrar un mensaje indicándolo.</p>",
-            "content":""
+            "content":"<form> <label for=\"age\">Input age</label> <input type=\"number\" for=\"age\" id=\"ej3input\" name=\"ej3input\"> <button type=\"button\" id=\"ej3button\" onclick=\"ejercicio3()\">SEND</button> <p id=\"ej3result\"></p> </form>"
         },
         {
             "id": 4,
-            "name": "Radius",
+            "name": "Yes/No",
             "number": "Four",
-            "description": "<p>2.Calcular radio.</p>",
-            "content": ""
+            "description": "<p>4. Realiza un programa que sólo permita introducir los caracteres ‘S’ y ‘N’. Si el usuario ingresa alguno de esos dos caracteres se deberá de imprimir un mensaje por pantalla que diga “CORRECTO”, en caso contrario, se deberá imprimir “INCORRECTO”</p>",
+            "content": "<form> <label for=\"yesorno\">Input (Y)es or (N)o</label> <input type=\"text\" for=\"yesorno\" id=\"ej4input\" name=\"ej4input\"> <button type=\"button\" id=\"ej4button\" onclick=\"ejercicio4()\">SEND</button> <p id=\"ej4result\"></p> </form>"
         },
         {
             "id": 5,

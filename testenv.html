@@ -20,18 +20,20 @@
     <h1 class="card-title">JavaScript Exercises</h1>
 
     <div>
-        <p>3. Escriba un programa en donde se pida la edad del usuario. Si el usuario es mayor de
-            edad se debe mostrar un mensaje indicándolo.</p>
-        <form>
-           <label for="age">Input age</label>
-           <input type="number" for="age" id="ej3input" name="ej3input">
-           <button type="button" id="ej3button" onclick="ejercicio3()">SEND</button>
-           <p id="ej3result"></p>
-        </form>
+        <p>5. Construir una calculadora</p>
+            <button onclick="ejercicio5()">START CALC</button>
+            <div id="visor-cont">
+                <div id="visor-left"></div><div id="visor"></div>
+            </div>
+            <div id="calculator-container">
+            <button id="calcBtn7" class="calcN calcB" onclick="calcBtn7">7</button><button id="calcBtn8" class="calcN calcB" onclick="calcBtn8">8</button><button id="calcBtn9" class="calcN calcB" onclick="calcBtn9">9</button><button id="calcBtnA" class="calcB" onclick="calcBtnA">+</button>
+            <button id="calcBtn4" class="calcN calcB" onclick="calcBtn4">4</button><button id="calcBtn5" class="calcN calcB" onclick="calcBtn5">5</button><button id="calcBtn6" class="calcN calcB" onclick="calcBtn6">6</button><button id="calcBtnS" class="calcB" onclick="calcBtnS">-</button>
+            <button id="calcBtn1" class="calcN calcB" onclick="calcBtn1">1</button><button id="calcBtn2" class="calcN calcB" onclick="calcBtn2">2</button><button id="calcBtn3" class="calcN calcB" onclick="calcBtn3">3</button><button id="calcBtnM" class="calcB" onclick="calcBtnM">*</button>
+            <button id="calcBtnE" class="calcB" onclick="calcBtnE">=</button><button id="calcBtn0" class="calcN calcB" onclick="calcBtn0">0</button><button id="calcBtnC" class="calcB" onclick="calcBtnC">C</button><button id="calcBtnD" class="calcB" onclick="calcBtnD">/</button>
+            
+        </div>
     </div>
     <script src="/js/js.js"></script>
 </body>
 
 </html>
-
-

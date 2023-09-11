@@ -6,7 +6,6 @@ Scope and Block-level Scoping:
 
 <span style="color:red; font-size:16px; font-weight:700">let</span>: Variables declared with let have block-level scope. This means they are accessible only within the block (enclosed by curly braces) in which they are defined.
 
-
 Arrow functions , provide a more concise syntax for defining functions in JavaScript. They are often referred to as "fat arrow" functions due to the use of the => syntax. Arrow functions have a few key characteristics:
 
 Traditional Function Expression:
@@ -23,3 +22,4 @@ Traditional Function Expression:
     const multiply = (x, y) => x * y;
 
     console.log(multiply(2, 3)); // Outputs: 6
+    
