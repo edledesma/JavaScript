@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img height="50px" src="img/javascript.svg" alt="JavaScript Logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="calculator.html">🧮 Calculator</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1 class="card-title">JavaScript</h1>
+
+    <div id="calculator">
+      <script>
+        window.onload = function () {
+          ejercicio5();
+        };
+      </script>
+      <div id="visor-cont">
+        <div id="visor-left"></div>
+        <div id="visor"></div>
+      </div>
+      <div id="calculator-container">
+        <button id="calcBtn7" class="calcN calcB">7</button
+        ><button id="calcBtn8" class="calcN calcB">8</button
+        ><button id="calcBtn9" class="calcN calcB">9</button
+        ><button id="calcBtnA" class="calcB">+</button>
+        <button id="calcBtn4" class="calcN calcB">4</button
+        ><button id="calcBtn5" class="calcN calcB">5</button
+        ><button id="calcBtn6" class="calcN calcB">6</button
+        ><button id="calcBtnS" class="calcB">-</button>
+        <button id="calcBtn1" class="calcN calcB">1</button
+        ><button id="calcBtn2" class="calcN calcB">2</button
+        ><button id="calcBtn3" class="calcN calcB">3</button
+        ><button id="calcBtnM" class="calcB">*</button>
+        <button id="calcBtnE" class="calcB">=</button
+        ><button id="calcBtn0" class="calcN calcB">0</button
+        ><button id="calcBtnC" class="calcB">C</button
+        ><button id="calcBtnD" class="calcB">/</button>
+      </div>
+    </div>
+    <footer>
+        <div id="footer" class="bg-white">
+          <p>
+            ©EDLedesma - Thanks for reading -
+            <a href="https://www.github.com/EDLedesma"
+              ><img src="img/github.svg" width="15px" alt="" /> GitHub</a
+            >
+            -
+            <a href="https://www.LinkedIn.com/in/edledesma"
+              ><img src="img/linkeding.svg" height="25px" /> LinkedIn</a
+            >
+          </p>
+        </div>
+      </footer>
+    <script src="/js/js.js"></script>
+  </body>
+</html>

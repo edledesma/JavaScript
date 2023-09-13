@@ -28,20 +28,6 @@
             "number": "Four",
             "description": "<p>4. Realiza un programa que sólo permita introducir los caracteres ‘S’ y ‘N’. Si el usuario ingresa alguno de esos dos caracteres se deberá de imprimir un mensaje por pantalla que diga “CORRECTO”, en caso contrario, se deberá imprimir “INCORRECTO”</p>",
             "content": "<form> <label for=\"yesorno\">Input (Y)es or (N)o</label> <input type=\"text\" for=\"yesorno\" id=\"ej4input\" name=\"ej4input\"> <button type=\"button\" id=\"ej4button\" onclick=\"ejercicio4()\">SEND</button> <p id=\"ej4result\"></p> </form>"
-        },
-        {
-            "id": 5,
-            "name": "Radius",
-            "number": "Five",
-            "description": "<p>2.Calcular radio.</p>",
-            "content": ""
-        },
-        {
-            "id": 6,
-            "name": "Radius",
-            "number": "Six",
-            "description": "<p>2.Calcular radio.</p>",
-            "content": ""
         }
     ]
 }
