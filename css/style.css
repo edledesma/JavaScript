@@ -1,8 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffc038;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   margin: 0; /* Remove default body margin */
 }
 
@@ -11,12 +13,12 @@ body {
   background-color: #ffda89;
 }
 
-#calculator{
-    margin-top: 1rem;;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
+#calculator {
+  margin-top: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #calculator-container {
@@ -81,4 +83,29 @@ body {
   text-align: center;
   padding: 10px 0 0 0;
   border-top: 1px solid #ccc;
+}
+
+.dol-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .75rem;
+  
+}
+
+.dollars {
+  width: 24rem;
+  padding-top: 0.625rem;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.card-body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

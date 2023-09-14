@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="icon" type="image/x-icon" href="img/javascript.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header class="main-header"></header>
+    <main>
+      <br>
+      <script>
+        window.onload = function () {
+          getPrices();
+        };
+      </script>
+      <div class="dol-container">
+        <!-- Dollar Input-->
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
+          <div class="card-header"><img src="./img/us.svg" width="32px"> Input dollar amount</div>
+          <div class="card-body">
+            <form for="dollarInput">
+              <input
+                type="number"
+                id="dollarInput"
+                placeholder="Input dollar amount"
+              /><button id="inputButton" type="button" class="btn btn-dark">
+                Calc
+              </button>
+              <p class="card-text" id="userInput"></p>
+            </form>
+          </div>
+        </div>
+      
+      <!-- Official Dollar-->
+      <div class="card text-white bg-success mb-3" style="max-width: 18rem">
+        <div class="card-header"><img src="./img/dollar.svg" width="32px"> Official Dollar</div>
+        <div class="card-body">
+          <div id="officialDollar" class="dollars"></div>
+        </div>
+      </div>
+      </div>
+      <div class="dol-container">
+        
+      <!-- Pesos Input-->
+      <div class="card text-white bg-dark mb-3" style="max-width: 18rem">
+        <div class="card-header"><img src="./img/ar.svg" width="32px">  Input pesos amount</div>
+        <div class="card-body">
+          <form for="pesosInput">
+            <input
+              type="number"
+              id="pesosInput"
+              placeholder="Input pesos amount"
+            /><button id="inputButtonP" type="button" class="btn btn-dark">
+              Calc
+            </button>
+            <p class="card-text" id="userInputPesos"></p>
+          </form>
+        </div>
+      </div>
+      <!-- Blue Dollar-->
+      <div class="card text-white bg-primary mb-3" style="max-width: 18rem">
+        <div class="card-header"><img src="./img/dollarB.svg" width="32px"> Blue Dollar</div>
+        <div class="card-body">
+          <div id="blueDollar" class="dollars"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </main>
+    <footer class="main-footer"></footer>
+    <script defer src="./js/js.js"></script>
+    <script defer src="./js/currency.js"></script>
+    <script src="./js/headFooter.js"></script>
+  </body>
+</html>
