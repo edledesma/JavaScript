@@ -16,7 +16,7 @@ async function getPrices() {
 
     const lastUpdate = document.querySelector("#last-update");
     const updateTime = new Date(dataO.fechaActualizacion)
-    lastUpdate.innerHTML = `Updated: ${updateTime.getDay()}/${updateTime.getMonth()+1}/${updateTime.getFullYear()} - ${updateTime.getHours()}:${updateTime.getMinutes()}:${updateTime.getSeconds()} (GMT-3)`;
+    lastUpdate.innerHTML = `Updated: ${updateTime.getDay()}/${updateTime.getMonth() + 1}/${updateTime.getFullYear()} - ${updateTime.getHours()}:${updateTime.getMinutes()}:${updateTime.getSeconds()} (GMT-3)`;
 
     const officialDollar = document.querySelector("#officialDollar");
     officialDollar.innerHTML = `<p>Official Dollar: <br> Buy: $${dataO.compra} <br> Sell: $${dataO.venta} </p>`;
@@ -67,9 +67,7 @@ async function getPrices() {
       } else {
         userInputPesos.innerHTML = `<p><img src="./img/dollar.svg" width="32px"><br> Oficial Dollar: USD $${parseFloat(
           inputValuePesos / dataO.venta
-        ).toFixed(
-          2
-        )}<br><img src="./img/dollarB.svg" width="32px"><br> Blue Dollar: USD $${parseFloat(
+        ).toFixed(2)}<br><img src="./img/dollarB.svg" width="32px"><br> Blue Dollar: USD $${parseFloat(
           inputValuePesos / dataB.venta
         ).toFixed(2)} </p>`;
       }
