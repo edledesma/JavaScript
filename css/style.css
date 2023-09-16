@@ -109,3 +109,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+#last-update{
+  text-align: right;
+  margin: -0.9375rem .625rem;
+  font-size: .8rem;
+  font-weight: 600;
+}
