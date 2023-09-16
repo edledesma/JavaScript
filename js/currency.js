@@ -15,9 +15,8 @@ async function getPrices() {
     }
 
     const lastUpdate = document.querySelector("#last-update");
-    lastUpdate.innerHTML = `Updated: ${dataO.fechaActualizacion
-      .replace("T", " / ")
-      .slice(0, -5)}`;
+    const updateTime = new Date(dataO.fechaActualizacion)
+    lastUpdate.innerHTML = `Updated: ${updateTime.getDay()}/${updateTime.getMonth()+1}/${updateTime.getFullYear()} - ${updateTime.getHours()}:${updateTime.getMinutes()}:${updateTime.getSeconds()} (GMT-3)`;
 
     const officialDollar = document.querySelector("#officialDollar");
     officialDollar.innerHTML = `<p>Official Dollar: <br> Buy: $${dataO.compra} <br> Sell: $${dataO.venta} </p>`;
@@ -41,22 +40,39 @@ async function getPrices() {
       const inputValue = parseFloat(
         document.querySelector("#dollarInput").value
       );
-      userInput.innerHTML = `<p><img src="./img/dollar.svg" width="32px"><br> Oficial Dollar Buy: ARS $${
-        inputValue * dataO.compra
-      }<br> Oficial Dollar Sell: ARS $${
-        inputValue * dataO.venta
-      }<br><img src="./img/dollarB.svg" width="32px"><br>Blue Dollar Buy: ARS $${
-        inputValue * dataB.compra
-      }<br> Blue Dollar Sell: ARS $${inputValue * dataB.venta} </p>`;
+
+      if (isNaN(inputValue) || inputValue < 0) {
+        userInput.innerHTML = `<p>Please input a valid number</p>`;
+      } else {
+        userInput.innerHTML = `<p><img src="./img/dollar.svg" width="32px"><br> Oficial Dollar Buy: ARS $${parseFloat(
+          inputValue * dataO.compra
+        ).toFixed(2)}<br> Oficial Dollar Sell: ARS $${parseFloat(
+          inputValue * dataO.venta
+        ).toFixed(
+          2
+        )}<br><img src="./img/dollarB.svg" width="32px"><br>Blue Dollar Buy: ARS $${parseFloat(
+          inputValue * dataB.compra
+        ).toFixed(2)}<br> Blue Dollar Sell: ARS $${parseFloat(
+          inputValue * dataB.venta
+        ).toFixed(2)} </p>`;
+      }
     }
 
     function calcPesos() {
       const inputValuePesos = parseFloat(
         document.querySelector("#pesosInput").value
       );
-      const ofiPesos = parseFloat(inputValuePesos / dataO.venta).toFixed(2);
-      const bluePesos = parseFloat(inputValuePesos / dataB.venta).toFixed(2);
-      userInputPesos.innerHTML = `<p><img src="./img/dollar.svg" width="32px"><br> Oficial Dollar: USD $${ofiPesos}<br><img src="./img/dollarB.svg" width="32px"><br> Blue Dollar: USD $${bluePesos} </p>`;
+      if (isNaN(inputValuePesos) || inputValuePesos < 0) {
+        userInputPesos.innerHTML = `<p>Please input a valid number</p>`;
+      } else {
+        userInputPesos.innerHTML = `<p><img src="./img/dollar.svg" width="32px"><br> Oficial Dollar: USD $${parseFloat(
+          inputValuePesos / dataO.venta
+        ).toFixed(
+          2
+        )}<br><img src="./img/dollarB.svg" width="32px"><br> Blue Dollar: USD $${parseFloat(
+          inputValuePesos / dataB.venta
+        ).toFixed(2)} </p>`;
+      }
     }
   } catch (error) {
     officialDollar.innerHTML = `<p>API is not reachable at this time.</p>`;
