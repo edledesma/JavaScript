@@ -16,7 +16,7 @@ async function getPrices() {
 
     const lastUpdate = document.querySelector("#last-update");
     const updateTime = new Date(dataO.fechaActualizacion)
-    lastUpdate.innerHTML = `Updated: ${updateTime.getDay()}/${updateTime.getMonth() + 1}/${updateTime.getFullYear()} - ${updateTime.getHours()}:${updateTime.getMinutes()}:${updateTime.getSeconds()} (GMT-3)`;
+    lastUpdate.innerHTML = `Updated: ${updateTime.getDate()}/${updateTime.getMonth() + 1}/${updateTime.getFullYear()} - ${updateTime.getHours()}:${updateTime.getMinutes()}:${updateTime.getSeconds()} (GMT-3)`;
 
     const officialDollar = document.querySelector("#officialDollar");
     officialDollar.innerHTML = `<p>Official Dollar: <br> Buy: $${dataO.compra} <br> Sell: $${dataO.venta} </p>`;
