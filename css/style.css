@@ -111,8 +111,7 @@ body {
 }
 
 #last-update{
-  text-align: right;
-  margin: -0.9375rem .625rem;
+  text-align: center;
   font-size: .8rem;
   font-weight: 600;
 }
