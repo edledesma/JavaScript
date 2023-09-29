@@ -49,10 +49,12 @@ function timer() {
         currentTime--;
         console.log(currentTime);
         timerDisplay.innerHTML = secToMin(currentTime);
-        if (currentTime === 0) {
+        document.title  = secToMin(currentTime);
+        if (currentTime === -1) {
             alarmAud.play();
             clearInterval(timerId);
             timerDisplay.textContent = "Time's up";
+            document.title  = "Timer";
             alert("Time's up");
             active = false;
         }
