@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function timer() {
-    var active = false;
-    var timerId;
-    var currentTime;
-    var minutesInput;
+    let active = false;
+    let timerId;
+    let currentTime;
+    let minutesInput;
     const alarmAud = new Audio("./audio/alarm.mp3");
     const timerDisplay = document.querySelector("#timer-display");
     const startTimer = document.querySelector("#start-timer");

@@ -58,12 +58,12 @@ function ejercicio5() {
   const btnD = document.querySelector("#calcBtnD");
   const calcN = document.querySelectorAll(".calcN");
 
-  var inputNumber = 0;
-  var inputAux = 0;
-  var visorArray = [];
-  var result = 0;
-  var operation = "";
-  var initialized = false;
+  let inputNumber = 0;
+  let inputAux = 0;
+  let visorArray = [];
+  let result = 0;
+  let operation = "";
+  let initialized = false;
 
   calcN.forEach((buttonN) => {
     buttonN.addEventListener("click", function () {
