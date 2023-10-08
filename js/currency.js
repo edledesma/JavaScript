@@ -44,15 +44,15 @@ async function getPrices() {
       if (isNaN(inputValue) || inputValue < 0) {
         userInput.innerHTML = `<p>Please input a valid number</p>`;
       } else {
-        userInput.innerHTML = `<p><img src="./img/dollar.svg" width="32px"><br> Oficial Dollar Buy: ARS $${parseFloat(
+        userInput.innerHTML = `<p><img src="./img/dollar.svg" width="32px"> Oficial Dollar<br>Buy: ARS $${parseFloat(
           inputValue * dataO.compra
-        ).toFixed(2)}<br> Oficial Dollar Sell: ARS $${parseFloat(
+        ).toFixed(2)}<br>Sell: ARS $${parseFloat(
           inputValue * dataO.venta
         ).toFixed(
           2
-        )}<br><img src="./img/dollarB.svg" width="32px"><br>Blue Dollar Buy: ARS $${parseFloat(
+        )}<br><img src="./img/dollarB.svg" width="32px"> Blue Dollar<br>Buy: ARS $${parseFloat(
           inputValue * dataB.compra
-        ).toFixed(2)}<br> Blue Dollar Sell: ARS $${parseFloat(
+        ).toFixed(2)}<br>Sell: ARS $${parseFloat(
           inputValue * dataB.venta
         ).toFixed(2)} </p>`;
       }
