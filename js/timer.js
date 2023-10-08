@@ -30,6 +30,7 @@ function timer() {
         timerDisplay.innerHTML = "Time";
         startTimer.classList.remove("btn-danger","btn-warning")
         startTimer.innerHTML = "START"
+        document.title  = "Timer";
         paused = false;
         active = false;
     });
