@@ -7,6 +7,7 @@ function timer() {
     let timerId;
     let currentTime;
     let minutesInput;
+    let paused = false;
     const alarmAud = new Audio("./audio/alarm.mp3");
     const timerDisplay = document.querySelector("#timer-display");
     const startTimer = document.querySelector("#start-timer");
@@ -14,18 +15,22 @@ function timer() {
     const inputMins = document.querySelector("#timer-minutes-input");
 
     startTimer.addEventListener("click", function () {
-        console.log(inputMins);
         if (!active && validateInput()) {
+            startTimer.classList.remove("btn-danger","btn-warning");
             minutesInput = parseInt(inputMins.value);
-            
-                startCountDown();
-            }
+            startCountDown();
+        }else if(active && validateInput()) {
+            pauseCountDown();
+        }
         
     });
 
     stopTimer.addEventListener("click", function () {
         clearInterval(timerId);
         timerDisplay.innerHTML = "Time";
+        startTimer.classList.remove("btn-danger","btn-warning")
+        startTimer.innerHTML = "START"
+        paused = false;
         active = false;
     });
 
@@ -40,16 +45,34 @@ function timer() {
     };
 
     function startCountDown() {
+        startTimer.classList.add("btn-danger")
+        startTimer.classList.remove("btn-warning")
+        startTimer.innerHTML = "PAUSE"
         currentTime = minutesInput * 60;
         active = true;
         timerId = setInterval(countDown, 1000);
     }
 
+    function pauseCountDown() {
+        console.log(`Time: ${currentTime} - Paused: ${paused}` );
+        paused = !paused;
+        if (paused) {
+            startTimer.classList.add("btn-warning")
+            startTimer.classList.remove("btn-danger")
+            startTimer.innerHTML = "RESUME"
+        }else{
+            startTimer.classList.remove("btm-warnings")
+            startTimer.classList.add("btn-danger")
+            startTimer.innerHTML = "PAUSE"
+        }
+    }        
+
     function countDown() {
-        currentTime--;
-        console.log(currentTime);
-        timerDisplay.innerHTML = secToMin(currentTime);
-        document.title  = secToMin(currentTime);
+        if (!paused) {
+            currentTime--;
+            console.log(currentTime);
+            timerDisplay.innerHTML = secToMin(currentTime);
+            document.title  = secToMin(currentTime);
         if (currentTime === -1) {
             alarmAud.play();
             clearInterval(timerId);
@@ -57,6 +80,11 @@ function timer() {
             document.title  = "Timer";
             alert("Time's up");
             active = false;
+            startTimer.classList.remove("btn-danger", "btn-warning");
+            startTimer.innerHTML = "START"
+        }
+        }else{
+            return
         }
     }
 
