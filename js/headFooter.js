@@ -37,6 +37,9 @@ let headerCONT = `<nav class="navbar navbar-expand-lg bg-body-tertiary">
       <li class="nav-item">
         <a class="nav-link" href="timer.html">⏳ Timer</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pomodoro.html">🍅 Pomodoro</a>
+      </li>
       </ul>
   </div>
 </div>

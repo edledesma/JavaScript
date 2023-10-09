@@ -133,7 +133,8 @@ body {
   justify-content: center;
   border: rgb(0, 0, 0) solid .25rem;
   border-radius: 10%;
-  width:16rem;
+  min-width:16rem;
+  width: 10vw;
   height: 16rem;
 }
 
@@ -149,4 +150,36 @@ body {
     margin-bottom:5rem;
   }
 
+}
+
+#pomodoro-container{
+  background-color: #e94f4f;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: #000000 solid .25rem;
+  border-radius: 10%;
+  min-width:16rem;
+  width: 10vw;
+  
+}
+
+#pomodoro-container img{
+  padding-top: 0.3rem;
+}
+
+#pomodoro-container p{
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 5px;
+}
+
+#cycle{
+  margin: 1rem auto;
+  font-weight: 600;
 }
