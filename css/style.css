@@ -1,3 +1,5 @@
+/* GENERAL STYLES */
+
 *{
   box-sizing: border-box;
 }
@@ -8,10 +10,30 @@ body {
   margin: 0;
 }
 
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffc038;
+  text-align: center;
+  padding: 0.625rem 0 0 0;
+  border-top: 1px solid #ccc;
+}
+
+@media(max-width: 580px){
+  body{
+    margin-bottom:5rem;
+  }
+
+}
+
 .card-title {
   text-align: center;
   background-color: #ffda89;
 }
+
+/* CALCULATOR STYLES */
 
 #calculator {
   margin-top: 1rem;
@@ -74,16 +96,7 @@ body {
   margin-left: 1rem;
 }
 
-#footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffc038;
-  text-align: center;
-  padding: 0.625rem 0 0 0;
-  border-top: 1px solid #ccc;
-}
+/* CURRENCY CONVERTER STYLES */
 
 .dol-container {
   display: flex;
@@ -122,6 +135,8 @@ body {
   font-weight: 600;
 }
 
+/* TIMER STYLES */
+
 #timer-container{
   background-color: rgba(224, 138, 81, 0.473);
   margin-top: 2%;
@@ -145,12 +160,7 @@ body {
   padding: 5px;
 }
 
-@media(max-width: 580px){
-  body{
-    margin-bottom:5rem;
-  }
-
-}
+/* POMODORO STYLES */
 
 #pomodoro-container{
   background-color: #e94f4f;
@@ -169,7 +179,7 @@ body {
 }
 
 #pomodoro-container img{
-  padding-top: 0.3rem;
+  margin-top: 1rem;
 }
 
 #pomodoro-container p{

@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     pomodoro();
 });
 
-
 function pomodoro() {
     let active = false;
     let timerId;
@@ -16,24 +15,26 @@ function pomodoro() {
     const stopTimer = document.querySelector("#stop-timer");
     const displayCycle = document.querySelector("#cycle");
     const pomContainer = document.querySelector("#pomodoro-container");
+    const favicon = document.querySelector("#favicon"); 
     
 
     startTimer.addEventListener("click", function () {
         if (!active) {
             startTimer.classList.remove("btn-danger","btn-warning");
             startCountDown();
+            favicon.setAttribute("href","/img/tomato.svg")
         }else if(active) {
             pauseCountDown();
         }
-        
     });
 
     stopTimer.addEventListener("click", function () {
         clearInterval(timerId);
         timerDisplay.innerHTML = "Time";
+        favicon.setAttribute("href","/img/javascript.ico")
         startTimer.classList.remove("btn-danger","btn-warning")
         startTimer.innerHTML = "START"
-        document.title  = "Timer";
+        document.title  = "Pomodoro";
         paused = false;
         active = false;
         breakTime = false
@@ -47,7 +48,6 @@ function pomodoro() {
         startTimer.classList.add("btn-danger")
         startTimer.classList.remove("btn-warning")
         startTimer.innerHTML = "PAUSE"
-        //currentTime = minutesInput * 60;
         if (cycle != 8) {
             if (breakTime == false) {
                 currentTime = 25*60;
@@ -62,15 +62,13 @@ function pomodoro() {
             }
         }else{
             currentTime = 25*60
-            cycle = 0
+            cycle = 1
             breakTime = false
             displayCycle.innerHTML = `Long Break`
             pomContainer.style.backgroundColor ="#199223"
         }
-        
         active = true;
         timerId = setInterval(countDown, 1000);
-        
     }
 
     function pauseCountDown() {
@@ -90,13 +88,12 @@ function pomodoro() {
     function countDown() {
         if (!paused) {
             currentTime--;
-            console.log(currentTime);
             timerDisplay.innerHTML = secToMin(currentTime);
             document.title  = secToMin(currentTime);
         if (currentTime === -1) {
             alertAud.play();
             clearInterval(timerId);
-            document.title  = "Timer";
+            document.title  = "Pomodoro";
             timerDisplay.innerHTML = "00:00";
             alert("Break Time!");
             cycle++;
