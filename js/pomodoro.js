@@ -22,7 +22,7 @@ function pomodoro() {
         if (!active) {
             startTimer.classList.remove("btn-danger","btn-warning");
             startCountDown();
-            favicon.setAttribute("href","/img/tomato.svg")
+            favicon.setAttribute("href","/img/tomato.ico")
         }else if(active) {
             pauseCountDown();
         }
