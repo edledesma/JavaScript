@@ -15,14 +15,11 @@ function pomodoro() {
     const stopTimer = document.querySelector("#stop-timer");
     const displayCycle = document.querySelector("#cycle");
     const pomContainer = document.querySelector("#pomodoro-container");
-    const favicon = document.querySelector("#favicon"); 
-    
 
     startTimer.addEventListener("click", function () {
         if (!active) {
             startTimer.classList.remove("btn-danger","btn-warning");
             startCountDown();
-            favicon.setAttribute("href","/img/tomato.ico")
         }else if(active) {
             pauseCountDown();
         }
@@ -31,7 +28,6 @@ function pomodoro() {
     stopTimer.addEventListener("click", function () {
         clearInterval(timerId);
         timerDisplay.innerHTML = "Time";
-        favicon.setAttribute("href","/img/javascript.ico")
         startTimer.classList.remove("btn-danger","btn-warning")
         startTimer.innerHTML = "START"
         document.title  = "Pomodoro";
