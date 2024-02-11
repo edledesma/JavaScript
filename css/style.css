@@ -20,6 +20,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  
 }
 
 #footer {
@@ -56,66 +57,139 @@ main {
 
 /* CALCULATOR STYLES */
 
-#calculator {
-  margin-top: 1rem;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#calculator-container {
+#calculator{
+  border-radius: 2%;
+  background-color: black;
+  padding: 1rem;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  width: 12.5rem;
-  margin-left: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6,1fr);
+  grid-gap: .4em;
+  grid-template-areas: 
+  "display display display display"
+  "btnClear btnSlash btnAsterisk btnMinus"
+  "btn7 btn8 btn9 btnPlus"
+  "btn4 btn5 btn6 btnPlus" 
+  "btn1 btn2 btn3 btnEquals" 
+  "btn0 btn0 btnDot btnEquals"
+  ;
 }
-
-.calcB {
-  color: rgb(0, 0, 0);
-  background: #e2b75b;
-  padding: 0.8rem;
-  border: #000000 solid 1px;
-}
-
-.calcN {
-  background: #ffda89;
-}
-
-.calcB:hover {
-  background-color: antiquewhite;
-}
-.calcB:active {
-  background-color: white;
-  border: #ffda89 solid 1px;
-}
-
-#visor-cont {
+#display{
+  grid-area: display;
+  font-weight: bold;
   display: flex;
-  background: #e2b75b;
-  width: 12.5rem;
-  height: 3rem;
-  margin-left: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  
+}
+
+#prevDy, #calcDy{
+  border: none;
+  
+}
+
+#prevDy{
+  color:red;
+  padding: 0 0 0 .5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  
+}
+
+#calcDy{
+  font-size: 2rem;
   text-align: right;
-  border: 1px solid black;
+  font-weight: bold;
+  color:black;
+  padding: 0 0.4rem 0 0;
 }
 
-#visor {
-  margin: 0.8rem 0 0 0;
-  padding-right: 0.5rem;
-  flex: 4rem;
-  width: 12.5rem;
-  position: absolute;
-  overflow: hidden;
+#btn9{
+  grid-area:btn9 ;
+}
+#btn8{
+  grid-area:btn8;
+}
+#btn7{
+  grid-area:btn7 ;
+}
+#btn6{
+  grid-area:btn6 ;
+}
+#btn5{
+  grid-area:btn5 ;
+}
+#btn4{
+  grid-area:btn4 ;
+}
+#btn3{
+  grid-area:btn3 ;
+}
+#btn2{
+  grid-area:btn2 ;
+}
+#btn1{
+  grid-area:btn1 ;
+}
+#btn0{
+  grid-area:btn0 ;
+}
+#btnSlash{
+  grid-area: btnSlash;
+}
+#btnAsterisk{
+  grid-area: btnAsterisk;
+}
+#btnMinus{
+  grid-area: btnMinus;
+}
+#btnPlus{
+  grid-area: btnPlus;
+}
+#btnDot{
+  grid-area: btnDot;
+}
+#btnClear{
+  grid-area: btnClear;
+  background-color: hsl(34, 100%, 50%)
 }
 
-#visor-left {
-  color: RED;
-  font-weight: 500;
-  font-size: 0.75rem;
-  text-align: left;
-  margin-left: 1rem;
+
+#btnEquals{
+  grid-area: btnEquals;
+  width: 100%;
+  background-color: hsl(30, 100%, 51%);
+  }
+
+.calcBtn{
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  }
+.btnOp{
+  background-color: hsl(203, 23%, 58%);
 }
+
+.numberBtn{
+  background-color: hsl(200, 51%, 90%)
+}
+
+.btnOp:hover{
+  background-color: hsl(203, 23%, 75%);
+}
+
+#btnClear:hover{
+  background-color: hsl(34, 100%, 90%)
+}
+#btnEquals:hover{
+background-color: hsl(30, 100%, 95%);
+} 
+
+.numberBtn:hover{
+  background-color: hsl(200, 51%, 100%)
+}
+
 
 /* CURRENCY CONVERTER STYLES */
 
