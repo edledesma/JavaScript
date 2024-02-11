@@ -12,6 +12,7 @@ document.body.addEventListener('keydown',function(event){
             button.click()
         }
     }else if (key == 'Enter'){
+        event.preventDefault();
         calculate()
     }else if (key == '+'){
         document.querySelector('#btnPlus').click()
@@ -21,6 +22,7 @@ document.body.addEventListener('keydown',function(event){
         document.querySelector('#btnAsterisk').click()
     }else if (key == '/'){
         document.querySelector('#btnSlash').click()
+        event.preventDefault();
     }
 })
 });

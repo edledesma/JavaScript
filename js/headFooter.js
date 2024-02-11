@@ -44,7 +44,7 @@ let headerCONT = `<nav class="navbar navbar-expand-lg bg-body-tertiary">
   </div>
 </div>
 </nav>
-<h1 class="card-title">JavaScript</h1>
+<h1 class="card-title">JS Collection</h1>
 `;
 
 document.querySelector(".main-header").innerHTML = headerCONT;
