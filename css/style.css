@@ -21,7 +21,6 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  
 }
 
 main h1{
@@ -118,56 +117,14 @@ main p{
   padding: 0 0.4rem 0 0;
 }
 
-#btn9{
-  grid-area:btn9 ;
-}
-#btn8{
-  grid-area:btn8;
-}
-#btn7{
-  grid-area:btn7 ;
-}
-#btn6{
-  grid-area:btn6 ;
-}
-#btn5{
-  grid-area:btn5 ;
-}
-#btn4{
-  grid-area:btn4 ;
-}
-#btn3{
-  grid-area:btn3 ;
-}
-#btn2{
-  grid-area:btn2 ;
-}
-#btn1{
-  grid-area:btn1 ;
-}
-#btn0{
-  grid-area:btn0 ;
-}
-#btnSlash{
-  grid-area: btnSlash;
-}
-#btnAsterisk{
-  grid-area: btnAsterisk;
-}
-#btnMinus{
-  grid-area: btnMinus;
-}
-#btnPlus{
-  grid-area: btnPlus;
-}
-#btnDot{
-  grid-area: btnDot;
-}
+#btn9{grid-area:btn9;}#btn8{grid-area:btn8;}#btn7{grid-area:btn7;}#btn6{grid-area:btn6;}#btn5{grid-area:btn5;}#btn4{grid-area:btn4 ;}
+#btn3{grid-area:btn3;}#btn2{grid-area:btn2;}#btn1{grid-area:btn1;}#btn0{grid-area:btn0;}#btnSlash{grid-area: btnSlash;}
+#btnAsterisk{grid-area: btnAsterisk;}#btnMinus{grid-area: btnMinus;}#btnPlus{grid-area: btnPlus;}#btnDot{grid-area: btnDot;}
+
 #btnClear{
   grid-area: btnClear;
   background-color: hsl(34, 100%, 50%)
 }
-
 
 #btnEquals{
   grid-area: btnEquals;
