@@ -42,7 +42,7 @@ document.querySelector(".main-header").innerHTML = headerCONT;
 
 let footerCONT = `
 <div id="footer" class="bg-white">
-    <p>©EDLedesma - Thanks for reading - <a href="https://www.github.com/EDLedesma"><img src="img/github.svg" width="15px" alt=""/> GitHub</a> <a href="https://www.LinkedIn.com/in/edledesma"><img src="img/linkeding.svg" height="25px"/>LinkedIn</a>
+    <p>©EDLedesma - Thanks for reading - <a href="https://www.github.com/EDLedesma"><img src="img/github.svg" width="15px" alt=""/>GitHub</a> <a href="https://www.LinkedIn.com/in/edledesma"><img src="img/linkeding.svg" height="25px"/>LinkedIn</a>
 </p>
 </div>
 `;
