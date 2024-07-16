@@ -1,6 +1,6 @@
 let headerCONT = `<nav class="navbar navbar-expand-lg bg-body-tertiary">
 <div class="container-fluid">
-  <a class="navbar-brand" href="index.html"
+  <a class="navbar-brand" href="/"
     ><img height="50px" src="img/javascript.svg" alt="JavaScript Logo"
   /></a>
   <button
@@ -56,8 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
   navLinks.forEach(link => {
       if (link.getAttribute('href') === currentPage) {
           link.classList.add('active');
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+      });
       } else {
           link.classList.remove('active');
       }
   });
 });
+
