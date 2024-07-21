@@ -332,6 +332,10 @@ background-color: hsl(30, 100%, 95%);
 
 @media only screen and (max-width: 992px) {
   #flexSwitchCheckDefault,#luna-icon,.form-check{
-    display:none;  /* Change to match background color */
+    display:none;
   }
+  .active::after,.nav-link::after{
+    width: 25%;
+  }
+
 }
