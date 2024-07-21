@@ -33,15 +33,19 @@ let headerCONT = `<nav class="navbar navbar-expand-lg bg-body-tertiary">
       </li>
       </ul>
   </div>
+  <div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label id="luna-icon" class="form-check-label" for="flexSwitchCheckDefault">🌙</label>
+</div>
 </div>
 </nav>
-<h1 class="card-title">JS Collection</h1>
+<h1 id="title-h1" class="card-title">JS Collection</h1>
 `;
 
 document.querySelector(".main-header").innerHTML = headerCONT;
 
 let footerCONT = `
-<div id="footer" class="bg-white">
+<div id="footer">
     <p>©EDLedesma - Thanks for reading - <a href="https://www.github.com/EDLedesma"><img src="img/github.svg" width="20px" alt=""/>GitHub</a> <a href="https://www.LinkedIn.com/in/edledesma"><img src="img/linkeding.svg" width="20px"/>LinkedIn</a>
 </p>
 </div>
@@ -65,3 +69,61 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// BOOTSTRAP DARK MODE TOGGLE - Code from https://getbootstrap.com/docs/5.3/customize/color-modes/#javascript
+    (() => {
+      'use strict'
+
+      const getStoredTheme = () => localStorage.getItem('theme')
+      const setStoredTheme = theme => localStorage.setItem('theme', theme)
+
+      const getPreferredTheme = () => {
+        const storedTheme = getStoredTheme()
+        if (storedTheme) {
+          return storedTheme
+        }
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      }
+
+      const setTheme = theme => {
+        if (theme === 'auto') {
+          document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+        } else {
+          document.documentElement.setAttribute('data-bs-theme', theme)
+        }
+      }
+
+      setTheme(getPreferredTheme())
+
+      const showActiveTheme = (theme) => {
+        const checkbox = document.querySelector('#flexSwitchCheckDefault')
+        const lunaIcon = document.querySelector('#luna-icon')
+
+        if (!checkbox || !lunaIcon) {
+          return
+        }
+
+        checkbox.checked = theme === 'dark'
+        lunaIcon.textContent = theme === 'dark' ? '🌙' : '☀️'
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        const storedTheme = getStoredTheme()
+        if (storedTheme !== 'light' && storedTheme !== 'dark') {
+          setTheme(getPreferredTheme())
+        }
+      })
+
+      window.addEventListener('DOMContentLoaded', () => {
+        const preferredTheme = getPreferredTheme()
+        showActiveTheme(preferredTheme)
+
+        const checkbox = document.querySelector('#flexSwitchCheckDefault')
+        checkbox.addEventListener('change', () => {
+          const theme = checkbox.checked ? 'dark' : 'light'
+          setStoredTheme(theme)
+          setTheme(theme)
+          showActiveTheme(theme)
+        })
+      })
+    })()

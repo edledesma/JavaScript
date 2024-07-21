@@ -1,6 +1,31 @@
 /* GENERAL STYLES */
 @import url('https://fonts.cdnfonts.com/css/neutraface-text');
 
+:root {
+  --bg-color-light: #ffffff;
+  --text-color-light: #000000;
+  --bg-color-dark: #121212;
+  --text-color-dark: #ffffff;
+}
+
+[data-bs-theme="dark"] body,[data-bs-theme="dark"] #footer,[data-bs-theme="dark"] #title-h1,[data-bs-theme="dark"] #timer-container {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+[data-bs-theme="dark"] #footer{
+  background-color: #343a40;
+  color: #fff;
+}
+
+[data-bs-theme="dark"] #title-h1 {
+  background-color: #413e38;
+}
+
+[data-bs-theme="dark"] #timer-container {
+  background-color: #494844;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -63,11 +88,21 @@ main p{
   pointer-events: none;
 }
 
+#flexSwitchCheckDefault{
+  background-color: #f7f5f5;
+  border-color: #ffffff;
+}
+
+#flexSwitchCheckDefault:checked{
+  background-color: #0a0808;
+  border-color: #666464;
+}
+
 #footer {
   width: 100%;
   display: flex;
   height: auto;
-  background-color: #ffc038;
+  background-color: white;
   text-align: center;
   justify-content: center;
   padding: 0.625rem 0 0 0;
@@ -242,7 +277,7 @@ background-color: hsl(30, 100%, 95%);
 /* TIMER STYLES */
 
 #timer-container {
-  background-color: rgba(224, 138, 81, 0.473);
+  background-color: rgb(240, 166, 67);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -258,7 +293,6 @@ background-color: hsl(30, 100%, 95%);
 }
 
 #timer-container p {
-  color: rgb(0, 0, 0);
   font-size: 2rem;
   font-weight: 700;
   padding: 5px;
@@ -294,4 +328,10 @@ background-color: hsl(30, 100%, 95%);
 #cycle {
   margin: 1rem auto;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 992px) {
+  #flexSwitchCheckDefault,#luna-icon,.form-check{
+    display:none;  /* Change to match background color */
+  }
 }
