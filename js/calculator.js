@@ -28,19 +28,49 @@ document.body.addEventListener('keydown',function(event){
 });
 
 function addToDisplay(input){
+    if ((isNaN(display.value.slice(-1))) && (isNaN(input)) || (display.value.slice(-1) == '' && (isNaN(input)))){
+        toggleButtonsOff();
+    }else{
     display.value += input;
+        toggleButtonsOn();
+    }
 }
 
 function clearDy(){
     display.value = '';
     opDisplay.value = '';
+    toggleButtonsOn();
+}
+
+const opBtns = ['Plus', 'Minus','Asterisk', 'Slash'];
+function toggleButtonsOff(){
+    opBtns.forEach(opBtn => {
+        document.querySelector('#btn'+opBtn).setAttribute('disabled','')
+    });
+}
+
+function toggleButtonsOn(){
+    opBtns.forEach(opBtn => {
+        document.querySelector('#btn'+opBtn).removeAttribute('disabled');
+    });
 }
 
 function calculate(){
     try{
         opDisplay.value = display.value
-        display.value = eval(display.value)
+        var result = eval(display.value)
+        if (isFinite(result)) {
+            display.value = result;
+        }else{
+            display.value = "Error1";
+            toggleButtonsOff();
+            setTimeout(function() {
+                clearDy()
+            }, 2000);
+            
+        }
     }catch(error){
-        display.value = 'Error';
+        display.value = 'Error2';
+        
     }
 }
