@@ -31,7 +31,7 @@
 }
 
 body {
-  background-color: #ffc038;
+  background-color: hsl(41, 100%, 61%);
   min-height: 100vh;
   margin: 0;
   margin: 0;
@@ -58,13 +58,20 @@ main p{
   
 }
 
+.nav-link{
+  position: relative;
+  margin-left: 0.5rem;
+  width: max-content;
+}
+
 .nav-link::after{
   content: '';
   height: 0.2rem;
   width: 100%;
-  background-color: #ffc038;
-  position: relative;
-  display: block;
+  background: linear-gradient(to left,hsl(30, 100%, 51%),hsl(41, 100%, 61%));
+  position: absolute;
+  bottom: 0;
+  left: 0;
   margin-top: 0.2rem;
   opacity: 0;
   transition: all .4s;
@@ -79,9 +86,10 @@ main p{
   content: '';
   height: 0.2rem;
   width: 100%;
-  background-color: #ffc038;
-  position: relative;
-  display: block;
+  background: linear-gradient(to left,hsl(30, 100%, 51%),hsl(41, 100%, 61%));
+  position: absolute;
+  bottom:0;
+  left: 0;
   margin-top: 0.2rem;
   opacity: 1;
   transition: all .4s;
@@ -334,8 +342,4 @@ background-color: hsl(30, 100%, 95%);
   #flexSwitchCheckDefault,#luna-icon,.form-check{
     display:none;
   }
-  .active::after,.nav-link::after{
-    width: 25%;
-  }
-
 }
