@@ -13,6 +13,7 @@ function timer() {
     const startTimer = document.querySelector("#start-timer");
     const stopTimer = document.querySelector("#stop-timer");
     const inputMins = document.querySelector("#timer-minutes-input");
+    const insText = document.querySelector("#ins-text");
 
     startTimer.addEventListener("click", function () {
         if (!active && validateInput()) {
@@ -27,6 +28,7 @@ function timer() {
 
     stopTimer.addEventListener("click", function () {
         clearInterval(timerId);
+        insText.innerHTML = "Input minutes";
         timerDisplay.innerHTML = "Time";
         startTimer.classList.remove("btn-danger","btn-warning")
         startTimer.innerHTML = "START"
@@ -46,6 +48,7 @@ function timer() {
     };
 
     function startCountDown() {
+        insText.innerHTML = " ​";
         startTimer.classList.add("btn-danger")
         startTimer.classList.remove("btn-warning")
         startTimer.innerHTML = "PAUSE"
